@@ -5,15 +5,35 @@
 }
 font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif;
+html {  
+    box-sizing: border-box;
+  }
+  *,*::after,*::before {
+          box-sizing: inherit;}
+          /* Стили для обнуления верхних отступов у элементов */
+h1,h2,h3,h4,h5,h6,p { 
+     margin-top: 0;}
+/* Класс для обнуления базовых свойств у списков (ul) */
+.list {    list-style: none;    padding-left: 0;    margin: 0;}
+/* Класс для обнуления базовых свойств у ссылок */
+.link {    text-decoration: none;    color: inherit;}
+/* Свойства для корректного отображения картинок */
+img {    display: block;    max-width: 100%;    height: auto;}
+/* Свойства для обнуления курсива у address */
+address {    font-style: normal;    /* or */    font-style: inherit;}
+
 body {background-color:#E5E5E5; 
     color:var(--primary-text-color);}
-.list {list-style: none;}
 
-/* вторичный цвет фона #F5F4FA */
-.logo {color: #212121;}
+/* лого */
+.logo {color: var(--accent-color);}
 .logo:hover
 {
     color:  var(--accent-color);
+}
+.span-header {color: var(--title-text-color);
+}
+.span-footer {color: white;
 }
 /* site nav */
 .site-nav .link
@@ -25,12 +45,13 @@ body {background-color:#E5E5E5;
 {
     color: var(--accent-color);
 }
+.site-nav .link.current{ color: var(--accent-color);}
 /* site adress */
 .address{
     color: #757575;
 }
-.address .link:hover,
-.address .link:focus{
+.address :hover,
+.address :focus{
     color: var(--accent-color); 
 }
 /* HERO */
@@ -39,22 +60,24 @@ color: #FFFFFF;
 background-color: #2F303A;
 }
 /*Features */
-.feature-list .title{
+.feature .title{
     color: var(--title-text-color);
 
-}
 .subtitle{
     color: var(--primary-text-color);
 }
-.aside-list .title {
+.person .title{color: var(--title-text-color);}
+.aside-list.title {
     color: var(--title-text-color);
 }
 /* footer */
-.footer{
-    background-color:#2F303A;
-}
+.footer .link{ }
+
+.footer{background-color:#2F303A;}
 .footer-logo{  
       color: #2196F3
     }
 .footer-logo:hover{color: var(--accent-color);}
-.footer-address{}
+.button {background-color: #2196F3;
+color: white;}
+.list .title {color: var(--title-text-color);}
