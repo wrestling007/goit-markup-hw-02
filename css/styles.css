@@ -2,6 +2,7 @@
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196F3;
+    --dark-bg: #2F303A;
 }
 font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif;
@@ -22,30 +23,49 @@ img {    display: block;    max-width: 100%;    height: auto;}
 /* Свойства для обнуления курсива у address */
 address {    font-style: normal;    /* or */    font-style: inherit;}
 
-body {background-color:#E5E5E5; 
-    color:var(--primary-text-color);}
-
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.71;
+    /* or 171% */    
+    letter-spacing: 0.03em;    
+    color: var(--primary-text-color);}
 /* лого */
-.logo {color: var(--accent-color);}
+.logo {font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    /* identical to box height */
+    
+    letter-spacing: 0.03em;
+    
+    color: #2196F3;}
 .logo:hover
 {
     color:  var(--accent-color);
 }
 .span-header {color: var(--title-text-color);
 }
+.header-link {font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;}
 .span-footer {color: white;
 }
 /* site nav */
-.site-nav .link
+.site-nav 
 {
-    color: #212121;
+    color: var(--title-text-color);
 }
 .site-nav .link:hover,
 .site-nav .link:focus
 {
     color: var(--accent-color);
 }
-.site-nav .link.current{ color: var(--accent-color);}
+.site-nav .current{ color: var(--accent-color);}
 /* site adress */
 .address{
     color: #757575;
@@ -60,6 +80,14 @@ color: #FFFFFF;
 background-color: #2F303A;
 }
 /*Features */
+.section-title{
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: var(--title-text-color);}
+.title {color: var(--title-text-color);}
 .feature .title{
     color: var(--title-text-color);
 
@@ -71,13 +99,13 @@ background-color: #2F303A;
     color: var(--title-text-color);
 }
 /* footer */
-.footer .link{ }
-
-.footer{background-color:#2F303A;}
+.footer{background-color: var(--dark-bg);}
 .footer-logo{  
       color: #2196F3
     }
 .footer-logo:hover{color: var(--accent-color);}
-.button {background-color: #2196F3;
+.button {basckground-color: #2196F3;
 color: white;}
 .list .title {color: var(--title-text-color);}
+.address-link {color: rgba(255, 255, 255, 0.6);}
+.address-link [target="_blank"] {color:white}
