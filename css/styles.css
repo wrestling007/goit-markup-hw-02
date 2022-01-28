@@ -1,111 +1,234 @@
-:root{
+:root {
     --primary-text-color: #757575;
     --title-text-color: #212121;
     --accent-color: #2196F3;
     --dark-bg: #2F303A;
+    --white-color: #ffffff;
+    --btn-bg: #F5F4FA;
 }
-font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif;
-html {  
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+html {
     box-sizing: border-box;
-  }
-  *,*::after,*::before {
-          box-sizing: inherit;}
-          /* Стили для обнуления верхних отступов у элементов */
-h1,h2,h3,h4,h5,h6,p { 
-     margin-top: 0;}
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Стили для обнуления верхних отступов у элементов */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+}
+
 /* Класс для обнуления базовых свойств у списков (ul) */
-.list {    list-style: none;    padding-left: 0;    margin: 0;}
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
 /* Класс для обнуления базовых свойств у ссылок */
-.link {    text-decoration: none;    color: inherit;}
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Свойства для корректного отображения картинок */
-img {    display: block;    max-width: 100%;    height: auto;}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 /* Свойства для обнуления курсива у address */
-address {    font-style: normal;    /* or */    font-style: inherit;}
+address {
+    font-style: normal;
+    /* or */
+    font-style: inherit;
+}
 
 body {
     font-family: Roboto, sans-serif;
     font-size: 14px;
     line-height: 1.71;
-    /* or 171% */    
-    letter-spacing: 0.03em;    
-    color: var(--primary-text-color);}
-/* лого */
-.logo {font-family: Raleway;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 26px;
-    line-height: 31px;
-    /* identical to box height */
-    
+    /* or 171% */
     letter-spacing: 0.03em;
-    
-    color: #2196F3;}
-.logo:hover
-{
-    color:  var(--accent-color);
+    color: var(--primary-text-color);
 }
-.span-header {color: var(--title-text-color);
-}
-.header-link {font-family: Roboto;
+
+/* common */
+.button {
+    background-color: var(--accent-color);
+    font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;}
-.span-footer {color: white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc (30/16);
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+    cursor: pointer;
+    border: none;
 }
-/* site nav */
-.site-nav 
-{
-    color: var(--title-text-color);
-}
-.site-nav .link:hover,
-.site-nav .link:focus
-{
-    color: var(--accent-color);
-}
-.site-nav .current{ color: var(--accent-color);}
-/* site adress */
-.address{
-    color: #757575;
-}
-.address :hover,
-.address :focus{
-    color: var(--accent-color); 
-}
-/* HERO */
-.section-hero{
-color: #FFFFFF;
-background-color: #2F303A;
-}
-/*Features */
-.section-title{
+
+.section-title {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    
-    color: var(--title-text-color);}
-.title {color: var(--title-text-color);}
-.feature .title{
-    color: var(--title-text-color);
+}
 
-.subtitle{
-    color: var(--primary-text-color);
-}
-.person .title{color: var(--title-text-color);}
-.aside-list.title {
+.title {
     color: var(--title-text-color);
 }
+
+/* лого */
+.logo {
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+
+    color: var(--accent-color);
+}
+
+/* logo */
+.logo-header {
+    color: var(--title-text-color);
+}
+
+.logo-footer {
+    color: var(--white-color);
+}
+
+/* header */
+.site-nav {
+    color: var(--title-text-color);
+}
+
+.header-link {
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: var(--accent-color);
+}
+
+.site-nav .current {
+    color: var(--accent-color);
+}
+
+
+
+/* HERO */
+.section-hero {
+    color: var(--white-color);
+    background-color: var(--dark-bg);
+}
+
+.hero-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: calc(60 / 44);
+    /* or 136% */
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* feature */
+.feature-title {
+    font-size: 14px;
+    line-height: calc(16/14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--title-text-color);
+}
+
+/* person */
+.person-title,
+.person-text {
+    font-size: 16px;
+    line-height: calc (19/16);
+}
+
+.person-title {
+    font-weight: 500;
+}
+
+.person-text {}
+
 /* footer */
-.footer{background-color: var(--dark-bg);}
-.footer-logo{  
-      color: #2196F3
-    }
-.footer-logo:hover{color: var(--accent-color);}
-.button {basckground-color: #2196F3;
-color: white;}
-.list .title {color: var(--title-text-color);}
-.address-link {color: rgba(255, 255, 255, 0.6);}
-.address-link [target="_blank"] {color:white}
+.footer {
+    background-color: var(--dark-bg);
+}
+
+.footer-logo {
+    color: #2196F3
+}
+
+.footer-logo:hover {
+    color: var(--accent-color);
+}
+
+.hero-btn {
+    padding: 10px 32px;
+}
+
+/* site adress */
+
+.address-link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.address-link [target="_blank"] {
+    color: var(--white-color)
+}
+
+/* portfolio */
+.filter-btn {
+    font-size: 16px;
+    line-height: calc(26/16);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    background: var(--btn-bg);
+    border-radius: 4px;
+}
+
+.filter-current:hover,
+.filter-current:focus {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+}
+
+.portfolio-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: calc(36 / 18);
+    letter-spacing: 0.06em;
+}
+
+.portfolio-item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: calc (30/16);
+}
