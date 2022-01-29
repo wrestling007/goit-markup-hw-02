@@ -52,8 +52,6 @@ img {
 
 /* Свойства для обнуления курсива у address */
 address {
-    font-style: normal;
-    /* or */
     font-style: inherit;
 }
 
@@ -73,7 +71,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: calc (30/16);
+    line-height: calc(30/16);
     letter-spacing: 0.06em;
     color: var(--white-color);
     cursor: pointer;
@@ -91,7 +89,8 @@ body {
     color: var(--title-text-color);
 }
 
-/* лого */
+
+/* logo */
 .logo {
     font-family: Raleway;
     font-style: normal;
@@ -105,7 +104,6 @@ body {
     color: var(--accent-color);
 }
 
-/* logo */
 .logo-header {
     color: var(--title-text-color);
 }
@@ -158,14 +156,13 @@ body {
     line-height: calc(16/14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--title-text-color);
 }
 
 /* person */
 .person-title,
 .person-text {
     font-size: 16px;
-    line-height: calc (19/16);
+    line-height: calc(19/16);
 }
 
 .person-title {
@@ -201,6 +198,15 @@ body {
     color: var(--white-color)
 }
 
+.address-link:hover,
+.address-link:focus {
+    color: var(--accent-color);
+}
+
+.address-link[target="_blank"] {
+    color: var(--white-color);
+}
+
 /* portfolio */
 .filter-btn {
     font-size: 16px;
@@ -212,8 +218,9 @@ body {
     border-radius: 4px;
 }
 
-.filter-current:hover,
-.filter-current:focus {
+.filter-btn:hover,
+.filter-btn:focus,
+.filter-current {
     color: var(--white-color);
     background-color: var(--accent-color);
 }
@@ -230,5 +237,5 @@ body {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: calc (30/16);
+    line-height: calc(30/16);
 }
